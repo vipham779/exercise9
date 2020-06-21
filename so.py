@@ -1,23 +1,35 @@
 '''
+This script returns top n questions voted the most on http://stackoverflow.com
 '''
 import itertools
 import requests
 import sys
 
 
+def request(n):
+    path = 'http://api.stackexchange.com/2.2/questions'
+    params = {
+        'pagesize': n,
+        'order': 'desc',
+        'sort': 'votes',
+        'tagged': 'label',
+        'site': 'stackoverflow',
+        'filter': '!-Kh(SzYi6xv1bR9.UW3FnYazg)LA73IP9'
+    }
+    return requests.get(path, params=params)
+
+
 def top_answers(n):
-    path = 'http://api.stackexchange.com/2.2/questions?pagesize={}&order=desc&sort=votes&tagged=label&site=stackoverflow&filter=!-Kh(SzYi6xv1bR9.UW3FnYazg)LA73IP9'.format(n)
-    resp = requests.get(path)
-    data = resp.json().get('items')
+    data = request(n).json().get('items')
     temp = []
     for elem in data:
-        link_title1= dict(itertools.islice(elem.items(), 3, 5))
-        link_title2 = dict(sorted(link_title1.items(), key=lambda x:x[0], reverse=True))
+        link_title1 = dict(itertools.islice(elem.items(), 3, 5))
+        link_title2 = dict(sorted(link_title1.items(),
+                           key=lambda x: x[0], reverse=True))
         for key, value in link_title2.items():
             temp.append('{}: {}\n'.format(key, value))
     result = '\n'.join(temp)
     return result
-    
 
 
 def main():
