@@ -7,7 +7,6 @@ Otherwise, he loses.
 import bs4
 import requests
 import sys
-blah blah
 
 
 def lottery_result():
