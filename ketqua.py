@@ -47,18 +47,18 @@ def verify_slots(input_data):
             else:
                 temp = 'Lose'
         if temp == "Win":
-            result.append(result)
+            result.append(temp)
         else:
-            result.append(result)
+            result.append(temp)
     return result
 
 
 def main():
     if len(sys.argv) < 2:
         print(lottery_result())
-        print('To know if you are luckly enough,\
-               please input an INTEGER with the format:\
-               python(3) ketqua.py [Integer1] [Integer2]...')
+        print('To know if you are luckly enough, '\
+              'please input an INTEGER with the format: '\
+              'python(3) ketqua.py [Integer]')
         sys.exit()
     else:
         input_data = sys.argv[1:]

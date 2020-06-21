@@ -19,7 +19,7 @@ def request(n):
     return requests.get(path, params=params)
 
 
-def top_answers(n):
+def top_questions(n):
     data = request(n).json().get('items')
     temp = []
     for elem in data:
@@ -40,7 +40,7 @@ def main():
     if not n.isdigit() or int(n) == 0:
         print('Please input an INTEGER LARGER THAN 0')
         sys.exit()
-    print(top_answers(n))
+    print(top_questions(n))
 
 
 if __name__ == '__main__':
