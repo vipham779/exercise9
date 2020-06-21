@@ -48,8 +48,8 @@ def n_restaurants(n):
     return result
 
 if __name__ == '__main__':
-    with open('pymi_beer.geojson', 'w', encoding='utf-8') as f:
-        geojson.dump(n_restaurants(40), f, ensure_ascii=False, indent=4)
+    with open('pymi_beer2.geojson', 'w', encoding='utf-8') as f:
+        geojson.dump(n_restaurants(40), f, ensure_ascii=False)
 
 
 
