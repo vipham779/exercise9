@@ -32,6 +32,7 @@ def lottery_result():
     return prizes
 
 
+# 
 def verify_slots(input_data):
     prizes = lottery_result()
     values = []
