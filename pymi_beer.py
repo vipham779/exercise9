@@ -37,19 +37,16 @@ def restaurants(pagetoken=None):
 
 
 def n_restaurants(n):
-    token1=None
+    token=None
     features = []
-    for _ in range(n//20):
-        resp = request(token1)
-        features.extend(restaurants(token1))
+    for _ in range(n//20+1):
+        resp = request(token)
+        features.extend(restaurants(token))
         if 'next_page_token' in resp.keys():
-            token1 = resp['next_page_token']
-    result = {'type': 'FeatureCollection', 'features': features}
+            token = resp['next_page_token']
+    result = {'type': 'FeatureCollection', 'features': features[:n]}
     return result
 
 if __name__ == '__main__':
     with open('pymi_beer2.geojson', 'w', encoding='utf-8') as f:
-        geojson.dump(n_restaurants(40), f, ensure_ascii=False)
-
-
-
+        geojson.dump(n_restaurants(40), f, ensure_ascii=False, indent=4)
