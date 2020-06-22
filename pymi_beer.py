@@ -10,7 +10,7 @@ import geojson
 pymi_lat, pymi_lng = 10.8162109, 106.6941154
 radius = 2000
 type = "restaurant"
-API_key = 'AIzaSyAnSkQYiHpykhKvkeBA1vbuQzSUEHrc4lQ'
+API_key = key
 
 def request(pagetoken=None):
     url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
@@ -48,5 +48,5 @@ def n_restaurants(n):
     return result
 
 if __name__ == '__main__':
-    with open('pymi_beer2.geojson', 'w', encoding='utf-8') as f:
-        geojson.dump(n_restaurants(40), f, ensure_ascii=False, indent=4)
+    with open('pymi_beer.geojson', 'w', encoding='utf-8') as f:
+        geojson.dump(n_restaurants(50), f, ensure_ascii=False, indent=4)
