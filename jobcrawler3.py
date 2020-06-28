@@ -1,10 +1,12 @@
 '''
-This script returns a csv file containing job details relating to
+Command line: python3 jobcrawler3.py [MULTIPLE OF 10]
+This script returns a csv file containing job posts relating to
 'Data Analyst' from Indeed. 
 
-If you want to return 10 posts, please
-input with the format: python(3) jobcrawler3.py 10. The same pattern 
-applies for 20, 30, etc.
+The input integer is 10 units fewer than the number of posts returned 
+
+Running 'python(3) jobcrawler3.py 0' returns 10 posts
+The same pattern is applied to 20 posts, 30 posts, etc..
 
 Be noted that you are only allowed to input an integer that is a 
 multiple of 10
