@@ -1,5 +1,6 @@
 '''
-This script returns a csv file containing job details relating to 'Data Analyst' from Indeed
+This script returns a csv file containing job details relating to
+'Data Analyst' from Indeed
 '''
 
 
@@ -42,7 +43,6 @@ def summary(soup):
     return summaries
 
 
-
 def request(number_results):
     columns = ['location', 'job_title', 'company', 'summary']
     df = pd.DataFrame(columns=columns)
@@ -50,8 +50,9 @@ def request(number_results):
     job_title = []
     job_company = []
     job_summary = []
-    for start in range(0,int(number_results), 10):
-        url = 'https://vn.indeed.com/jobs?q=data+analyst&l=vietnam&start={}'.format(start)
+    for start in range(0, int(number_results), 10):
+        url = 'https://vn.indeed.com/jobs?q=data+analyst&l=vietnam'\
+              '&start={}'.format(start)
         resp = requests.get(url)
         time.sleep(1)
         soup = BeautifulSoup(resp.text, features='html.parser')
@@ -68,15 +69,14 @@ def request(number_results):
 
 def main():
     if len(sys.argv) < 2:
-        print('Please input a mulitple of 10 with the format: python(3) jobcrawler3.py [MULTIPLE OF 10]')
+        print('Please input a mulitple of 10 with the format: '
+              'python(3) jobcrawler3.py [MULTIPLE OF 10]')
         sys.exit()
     else:
         number_results = sys.argv[1]
         df = request(number_results)
         df.to_csv('jobcrawler3.csv', encoding='utf8')
-    
-    
-if __name__== '__main__':
-    main()
 
-    
+
+if __name__ == '__main__':
+    main()
