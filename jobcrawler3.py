@@ -1,6 +1,13 @@
 '''
 This script returns a csv file containing job details relating to
-'Data Analyst' from Indeed
+'Data Analyst' from Indeed. 
+
+If you want to return 10 posts, please
+input with the format: python(3) jobcrawler3.py 10. The same pattern 
+applies for 20, 30, etc.
+
+Be noted that you are only allowed to input an integer that is a 
+multiple of 10
 '''
 
 
