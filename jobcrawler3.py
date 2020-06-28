@@ -38,7 +38,7 @@ def company(soup):
 
 def summary(soup):
     scopes = soup.find_all('div', attrs={'class': 'summary'})
-    summaries = [scope.text.strip().split('\n') for scope in scopes]
+    summaries = [scope.text.strip() for scope in scopes]
     return summaries
 
 
