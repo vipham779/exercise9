@@ -18,6 +18,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import time
 import sys
+# from crontab import CronTab
 
 
 def location(soup):
@@ -43,7 +44,16 @@ def company(soup):
 
 def date(soup):
     dates = [span.text for span in soup.find_all("span", attrs={"class": "date"})]
-    return dates
+    temp = []
+    for date in dates:
+        idx = date.rfind('n')
+        if date[:idx-1].endswith('+'):
+            temp.append('{}+ days ago'.format(date[:idx-2]))
+        elif int(date[:idx-1]) == 1:
+            temp.append('{} day ago'.format(date[:idx-1].zfill(2)))
+        else:
+            temp.append('{} days ago'.format(date[:idx-1].zfill(2)))
+    return temp
 
 
 def request(number_results):
@@ -54,10 +64,13 @@ def request(number_results):
     job_company = []
     job_date = []
     for start in range(0, int(number_results), 10):
-        url = "https://vn.indeed.com/jobs?q=data+analyst&l=vietnam" "&start={}".format(
-            start
-        )
-        resp = requests.get(url)
+        url = "https://vn.indeed.com/jobs?q=data+analyst&l=vietnam" 
+        params = {
+            'q': 'data+analyst',
+            'l': 'vietnam',
+            'start': start
+        }
+        resp = requests.get(url, params=params)
         time.sleep(1)
         soup = BeautifulSoup(resp.text, features="html.parser")
         job_location.extend(location(soup))
@@ -68,7 +81,9 @@ def request(number_results):
     df["title"] = job_title
     df["company"] = job_company
     df["date"] = job_date
-    return df
+    result = df.sort_values('date').reset_index()
+    del result['index']
+    return result
 
 
 def main():
