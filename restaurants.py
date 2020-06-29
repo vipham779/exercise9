@@ -13,7 +13,7 @@ import time
 import sys
 
 
-pymi_lat, pymi_lng = 10.8162109, 106.6941154
+address_lat, address_lng = 10.8162109, 106.6941154
 radius = 2000
 type = "restaurant"
 API_key = key
@@ -22,7 +22,7 @@ API_key = key
 def request(token=None):
     url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
     params = {
-        "location": "{},{}".format(pymi_lat, pymi_lng),
+        "location": "{},{}".format(address_lat, address_lng),
         "radius": radius,
         "type": type,
         "token": token,
