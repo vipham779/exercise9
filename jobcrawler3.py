@@ -21,44 +21,32 @@ import sys
 
 
 def location(soup):
-    locations = []
-    for div in soup.find_all('div', attrs={'class': 'row'}):
-        location = div.find_all('span', attrs={'class': 'location'})
-        for address in location:
-            locations.append(address.text.strip())
+    locations = [span.text for span in soup.find_all('span', attrs={'class': 'location'})]
     return locations
 
 
 def title(soup):
-    titles = []
-    for div in soup.find_all('div', attrs={'class': 'row'}):
-        for a in div.find_all('a', attrs={'data-tn-element': 'jobTitle'}):
-            titles.append(a['title'])
+    titles = [a['title'] for a in soup.find_all('a', attrs={'data-tn-element': 'jobTitle'})]
     return titles
 
 
 def company(soup):
-    companies = []
-    for div in soup.find_all('div', attrs={'class': 'row'}):
-        company = div.find_all('span', attrs={'class': 'company'})
-        for name in company:
-            companies.append(name.text.strip())
+    companies = [span.text.strip() for span in soup.find_all('span', attrs={'class': 'company'})]
     return companies
 
 
-def summary(soup):
-    scopes = soup.find_all('div', attrs={'class': 'summary'})
-    summaries = [scope.text.strip() for scope in scopes]
-    return summaries
+def date(soup):
+    dates = [span.text for span in soup.find_all('span', attrs={'class': 'date'})]
+    return dates
 
 
 def request(number_results):
-    columns = ['location', 'job_title', 'company', 'summary']
+    columns = ['location', 'title', 'company', 'date']
     df = pd.DataFrame(columns=columns)
     job_location = []
     job_title = []
     job_company = []
-    job_summary = []
+    job_date = []
     for start in range(0, int(number_results), 10):
         url = 'https://vn.indeed.com/jobs?q=data+analyst&l=vietnam'\
               '&start={}'.format(start)
@@ -68,11 +56,11 @@ def request(number_results):
         job_location.extend(location(soup))
         job_title.extend(title(soup))
         job_company.extend(company(soup))
-        job_summary.extend(summary(soup))
+        job_date.extend(date(soup))
     df['location'] = job_location
-    df['job_title'] = job_title
+    df['title'] = job_title
     df['company'] = job_company
-    df['summary'] = job_summary
+    df['date'] = job_date
     return df
 
 
