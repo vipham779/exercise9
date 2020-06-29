@@ -286,13 +286,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.6913326,
-                    10.8112244
+                    106.6934208,
+                    10.8214081
                 ]
             },
             "properties": {
-                "name": "ANKAIZI",
-                "address": "202 Nguyễn Văn Đậu, Phường 11, Bình Thạnh"
+                "name": "Công Ty Cổ Phần TYGITS",
+                "address": "10 Trần Quốc Tuấn, Phường 1, Gò Vấp"
             }
         },
         {
@@ -300,13 +300,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.689547,
-                    10.8203139
+                    106.6961292,
+                    10.8102794
                 ]
             },
             "properties": {
-                "name": "Trà Sữa ShanCha",
-                "address": "593 Lê Quang Định, Phường 1, Gò Vấp"
+                "name": "Únu Quán",
+                "address": "140H Phan Văn Trị, Phường 12, Bình Thạnh"
             }
         },
         {
@@ -314,13 +314,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.6886834,
-                    10.819337
+                    106.6958333,
+                    10.8113889
                 ]
             },
             "properties": {
-                "name": "Com Chay Thien Duc",
-                "address": "249 Phạm Văn Đồng, Phường 1, Gò Vấp"
+                "name": "KFC No Trang Long",
+                "address": "170A Nơ Trang Long, Phường 12, Bình Thạnh"
             }
         },
         {
@@ -328,13 +328,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.695238,
-                    10.81008
+                    106.6939605,
+                    10.8171064
                 ]
             },
             "properties": {
-                "name": "Pizza Hut",
-                "address": "130 Nơ Trang Long, Phường 14, Bình Thạnh"
+                "name": "Công Ty TNHH TMDV Huy Gia Phương",
+                "address": "92 Nguyên Hồng, Phường 11, Bình Thạnh"
             }
         },
         {
@@ -342,13 +342,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.6983428,
-                    10.8212352
+                    106.7027015,
+                    10.8196157
                 ]
             },
             "properties": {
-                "name": "Nhà Hàng Hải Sản 336",
-                "address": "336 Phạm Văn Đồng, Phường 13, Bình Thạnh"
+                "name": "Ẩm thực chay Huệ Tâm",
+                "address": "361 Nơ Trang Long, Bình Thạnh"
             }
         },
         {
@@ -356,13 +356,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.6976168,
-                    10.8218053
+                    106.6887715,
+                    10.8153589
                 ]
             },
             "properties": {
-                "name": "Phố Nướng Jokul",
-                "address": "388 Phạm Văn Đồng, Phường 13, Bình Thạnh"
+                "name": "Viet Huong Restaurant - Grilled chickens in clay pots",
+                "address": "449A3 Lê Quang Định, Phường 5, Bình Thạnh"
             }
         },
         {
@@ -370,13 +370,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.7007111,
-                    10.8149692
+                    106.7010168,
+                    10.8086002
                 ]
             },
             "properties": {
-                "name": "Quán Đảo - Cá biển nướng",
-                "address": "129 Phan Chu Trinh, Phường 12, Bình Thạnh"
+                "name": "Quán Ăn 60",
+                "address": "60s Ngô Đức Kế, Phường 12, Bình Thạnh"
             }
         },
         {
@@ -384,13 +384,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.6892732,
-                    10.8113925
+                    106.6957765,
+                    10.8157463
                 ]
             },
             "properties": {
-                "name": "Quán Cây Gòn",
-                "address": "17 Trần Bình Trọng, Phường 5, Bình Thạnh"
+                "name": "Bình Định Quán",
+                "address": "33, Trần Quý Cáp, Phường 12, Quận Bình Thạnh, Phường 11, Bình Thạnh"
             }
         },
         {
@@ -398,13 +398,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.687725,
-                    10.812568
+                    106.6924442,
+                    10.8153836
                 ]
             },
             "properties": {
-                "name": "Cơm Trưa 1 Bis",
-                "address": "1 bis Nguyễn Trung Trực, Phường 5, Bình Thạnh"
+                "name": "Vú Heo Nướng - Nguyễn Văn Đậu",
+                "address": "Bình Thạnh"
             }
         },
         {
@@ -412,13 +412,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.686728,
-                    10.8178844
+                    106.6948175,
+                    10.8187746
                 ]
             },
             "properties": {
-                "name": "Mì cay NAGA 224",
-                "address": "224 Phạm Văn Đồng, Phường 1, Gò Vấp"
+                "name": "ANKAIZI-Bánh bạch tuộc",
+                "address": "334 Phan Văn Trị, Phường 11, Bình Thạnh"
             }
         },
         {
@@ -426,13 +426,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.6934275,
-                    10.8237347
+                    106.697738,
+                    10.815907
                 ]
             },
             "properties": {
-                "name": "Buzza Pizza - Emart",
-                "address": "366 Phan Văn Trị, Phường 5, Gò Vấp"
+                "name": "Quán ăn Món Mắm Trí Hải",
+                "address": "219E Nơ Trang Long, Phường 11, Bình Thạnh"
             }
         },
         {
@@ -440,13 +440,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.694249,
-                    10.80855
+                    106.6980702,
+                    10.8156846
                 ]
             },
             "properties": {
-                "name": "Cơm Tấm Ngô Quyền",
-                "address": "189 Lê Quang Định, Phường 7, Bình Thạnh"
+                "name": "Jolie Bakery Cafe",
+                "address": "290 Nơ Trang Long, Phường 12, Bình Thạnh"
             }
         },
         {
@@ -454,13 +454,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.6922989,
-                    10.8238184
+                    106.6914504,
+                    10.8195771
                 ]
             },
             "properties": {
-                "name": "Gogi House E-Mart Gò Vấp",
-                "address": "F1-04, TTTM Emart, 168 Phan Văn Trị, Phường 5, Gò Vấp"
+                "name": "Bia Đức Paderborner",
+                "address": "328 Phạm Văn Đồng, Phường 1, Gò Vấp"
             }
         },
         {
@@ -468,13 +468,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.6865131,
-                    10.8189797
+                    106.6898256,
+                    10.8139003
                 ]
             },
             "properties": {
-                "name": "Mi Quảng đường ray",
-                "address": "25/44 Lê Lợi, P4, Gò Vấp, TPHCM, VN, 41/66 Hẻm 41 Lê Lợi, Phường 4, Gò Vấp"
+                "name": "Quán Hủ Tiếu Mỹ Tho Xưa",
+                "address": "476 Lê Quang Định, Phường 11, Bình Thạnh"
             }
         },
         {
@@ -482,13 +482,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.6917585,
-                    10.8238579
+                    106.6920889,
+                    10.8117966
                 ]
             },
             "properties": {
-                "name": "Domino's Pizza Phan Văn Trị",
-                "address": "491 Phan Văn Trị, Phường 5, Gò Vấp"
+                "name": "Quán Bánh Xèo Gốc Quảng",
+                "address": "323/8 Lê Quang Định, Phường 5, Bình Thạnh"
             }
         },
         {
@@ -496,13 +496,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.6917766,
-                    10.8239713
+                    106.6963355,
+                    10.8208287
                 ]
             },
             "properties": {
-                "name": "quán Bếp Than 501 Phan Văn Trị",
-                "address": "501 Phan Văn Trị, Phường 5, Gò Vấp"
+                "name": "Nhà Hàng PHỐ ĐÊM",
+                "address": "346 Phạm Văn Đồng, Phường 1, Bình Thạnh"
             }
         },
         {
@@ -510,13 +510,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.686805,
-                    10.820288
+                    106.6892932,
+                    10.8186536
                 ]
             },
             "properties": {
-                "name": "Lẩu nướng - hải sản Làng Gò",
-                "address": "57 Lê Lợi, Phường 4, Gò Vấp"
+                "name": "Banh Mi Bot Loc Hue Restaurant",
+                "address": "519 Lê Quang Định, Phường 1, Gò Vấp"
             }
         },
         {
@@ -524,13 +524,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.700813,
-                    10.811043
+                    106.6885594,
+                    10.8159348
                 ]
             },
             "properties": {
-                "name": "Mì Phục Hưng",
-                "address": "2A Chu Văn An, Phường 12, Bình Thạnh"
+                "name": "Bún Thịt Nướng Phước Sơn",
+                "address": "463 Lê Quang Định, Phường 1, Gò Vấp"
             }
         },
         {
@@ -538,13 +538,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.6909885,
-                    10.8083516
+                    106.6991094,
+                    10.818769
                 ]
             },
             "properties": {
-                "name": "Vườn 42 cafe&resto",
-                "address": "42/59 Hoàng Hoa Thám, Phường 7, Bình Thạnh"
+                "name": "alibabon",
+                "address": "283 Nơ Trang Long, Phường 13, Bình Thạnh"
             }
         },
         {
@@ -552,13 +552,153 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    106.7001049,
-                    10.8225207
+                    106.6891086,
+                    10.8188683
                 ]
             },
             "properties": {
-                "name": "123-Zo.vn",
-                "address": "455 Phạm Văn Đồng, Phường 13, Bình Thạnh"
+                "name": "Squid Noodle - Ong Gia Cali",
+                "address": "288 Phạm Văn Đồng, Phường 1, Gò Vấp"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.6934208,
+                    10.8214081
+                ]
+            },
+            "properties": {
+                "name": "Công Ty Cổ Phần TYGITS",
+                "address": "10 Trần Quốc Tuấn, Phường 1, Gò Vấp"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.6961292,
+                    10.8102794
+                ]
+            },
+            "properties": {
+                "name": "Únu Quán",
+                "address": "140H Phan Văn Trị, Phường 12, Bình Thạnh"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.6958333,
+                    10.8113889
+                ]
+            },
+            "properties": {
+                "name": "KFC No Trang Long",
+                "address": "170A Nơ Trang Long, Phường 12, Bình Thạnh"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.6939605,
+                    10.8171064
+                ]
+            },
+            "properties": {
+                "name": "Công Ty TNHH TMDV Huy Gia Phương",
+                "address": "92 Nguyên Hồng, Phường 11, Bình Thạnh"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.7027015,
+                    10.8196157
+                ]
+            },
+            "properties": {
+                "name": "Ẩm thực chay Huệ Tâm",
+                "address": "361 Nơ Trang Long, Bình Thạnh"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.6887715,
+                    10.8153589
+                ]
+            },
+            "properties": {
+                "name": "Viet Huong Restaurant - Grilled chickens in clay pots",
+                "address": "449A3 Lê Quang Định, Phường 5, Bình Thạnh"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.7010168,
+                    10.8086002
+                ]
+            },
+            "properties": {
+                "name": "Quán Ăn 60",
+                "address": "60s Ngô Đức Kế, Phường 12, Bình Thạnh"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.6957765,
+                    10.8157463
+                ]
+            },
+            "properties": {
+                "name": "Bình Định Quán",
+                "address": "33, Trần Quý Cáp, Phường 12, Quận Bình Thạnh, Phường 11, Bình Thạnh"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.6924442,
+                    10.8153836
+                ]
+            },
+            "properties": {
+                "name": "Vú Heo Nướng - Nguyễn Văn Đậu",
+                "address": "Bình Thạnh"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.6948175,
+                    10.8187746
+                ]
+            },
+            "properties": {
+                "name": "ANKAIZI-Bánh bạch tuộc",
+                "address": "334 Phan Văn Trị, Phường 11, Bình Thạnh"
             }
         }
     ]
