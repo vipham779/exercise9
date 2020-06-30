@@ -1,11 +1,12 @@
 """
-Command line: python3 jobcrawler3.py [MULTIPLE OF 10]
-This script returns a csv file containing job posts relating to
-'Data Analyst' from Indeed.
+Command line: python3 jobcrawler3.py [POSITION][MULTIPLE OF 10]
+This script returns a csv file containing job posts from Indeed.
 
+The white space among words in [POSITION] is replaced with '+'
 The input integer is 10 units fewer than the number of posts returned
 
-Running 'python(3) jobcrawler3.py 0' returns 10 posts
+If you want to return 10 posts of position 'Data Analyst', run
+'python(3) jobcrawler3.py data+analyst 0'
 The same pattern is applied to 20 posts, 30 posts, etc..
 
 Be noted that you are only allowed to input an integer that is a
@@ -57,7 +58,7 @@ def date(soup):
     return temp
 
 
-def request(number_results):
+def request(position, number_results):
     columns = ["location", "title", "company", "date"]
     df = pd.DataFrame(columns=columns)
     job_location = []
@@ -65,8 +66,8 @@ def request(number_results):
     job_company = []
     job_date = []
     for start in range(0, int(number_results), 10):
-        url = "https://vn.indeed.com/jobs?q=data+analyst&l=vietnam"
-        params = {"q": "data+analyst", "l": "vietnam", "start": start}
+        url = "https://vn.indeed.com/jobs"
+        params = {"q": position.lower(), "l": "vietnam", "start": start}
         resp = requests.get(url, params=params)
         time.sleep(1)
         soup = BeautifulSoup(resp.text, features="html.parser")
@@ -87,12 +88,13 @@ def main():
     if len(sys.argv) < 2:
         print(
             "Please input a mulitple of 10 with the format: "
-            "python(3) jobcrawler3.py [MULTIPLE OF 10]"
+            "python(3) jobcrawler3.py [POSITION][MULTIPLE OF 10]"
         )
         sys.exit()
     else:
-        number_results = sys.argv[1]
-        df = request(number_results)
+        position = sys.argv[1]
+        number_results = sys.argv[-1]
+        df = request(position, number_results)
         df.to_csv("jobcrawler3.csv", encoding="utf8")
 
 
