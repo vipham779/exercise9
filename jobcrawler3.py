@@ -50,8 +50,8 @@ def date(soup):
         idx = date.rfind("n")
         if date[: idx - 1].endswith("+"):
             temp.append("{}+ days ago".format(date[: idx - 2]))
-        elif int(date[: idx - 1]) == 1:
-            temp.append("{} day ago".format(date[: idx - 1].zfill(2)))
+        elif 'Hôm' in date:
+            temp.append('01 day ago')
         else:
             temp.append("{} days ago".format(date[: idx - 1].zfill(2)))
     return temp
