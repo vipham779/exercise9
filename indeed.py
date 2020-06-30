@@ -1,5 +1,5 @@
 """
-Command line: python3 jobcrawler3.py [POSITION][MULTIPLE OF 10]
+Command line: python3 indeed.py [POSITION][MULTIPLE OF 10]
 This script returns a csv file containing job posts from Indeed.
 
 The white space among words in [POSITION] is replaced with '+'
@@ -88,14 +88,14 @@ def main():
     if len(sys.argv) < 2:
         print(
             "Please input a mulitple of 10 with the format: "
-            "python(3) jobcrawler3.py [POSITION][MULTIPLE OF 10]"
+            "python(3) indeed.py [POSITION][MULTIPLE OF 10]"
         )
         sys.exit()
     else:
         position = sys.argv[1]
         number_results = sys.argv[-1]
         df = request(position, number_results)
-        df.to_csv("jobcrawler3.csv", encoding="utf8")
+        df.to_csv("indeed.csv", encoding="utf8")
 
 
 if __name__ == "__main__":
