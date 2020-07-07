@@ -12,7 +12,7 @@ import pandas as pd
 import datetime
 
 
-api_key = 'AIzaSyCjpgF23NQ_H3PrEptKmpqbo5ujBjXlg8A'
+api_key = key
 def request(keyword):
     youtube = build('youtube', 'v3', developerKey=api_key)
     req = youtube.search().list(
@@ -24,14 +24,14 @@ def request(keyword):
 
 def title(keyword):
     resp = request(keyword)
-    title = [item['snippet']['title'] for item in resp['items']]
-    return title
+    result = [item['snippet']['title'] for item in resp['items']]
+    return result
 
 
 def link(keyword):
     resp = request(keyword)
-    link = ['https://www.youtube.com/watch?v={}'.format(item['id']['videoId']) for item in resp['items']]
-    return link
+    result = ['https://www.youtube.com/watch?v={}'.format(item['id']['videoId']) for item in resp['items']]
+    return result
 
 
 def statistics(keyword):
@@ -68,22 +68,31 @@ def channel(keyword):
     result = [item['snippet']['channelTitle'] for item in resp['items']]
     return result
 
-  
+
+def table(keyword, criteria):
+    columns = ['title', 'link', 'view', 'date', 'channel']
+    df = pd.DataFrame(columns=columns)
+    df['title'] = title(keyword)
+    df['link'] = link(keyword)
+    df['view'] = statistics(keyword)
+    df['date'] = date(keyword)
+    df['channel'] = channel(keyword)
+    if criteria == 'view':
+        kf = df.sort_values('view', ascending=False)
+        kf['view'] = ['f{i:,}' for num in kf['view']]
+    elif criteria == 'date':
+        kf = df.sort_values('date', ascending=False)
+        kf['view'] = ['f{i:,}' for num in kf['view']]
+    return kf
 
 def main():
     if len(sys.argv) < 2:
-        print('Please input with the format: python3 youtube.py [keyword] [number of results]')
+        print('Please input with the format: python3 youtube.py [keyword] [order by]')
         sys.exit(1)
     else:
         keyword = sys.argv[1]
-        columns = ['title', 'link', 'view', 'date', 'channel']
-        df = pd.DataFrame(columns=columns)
-        df['title'] = title(keyword)
-        df['link'] = link(keyword)
-        df['view'] = statistics(keyword)
-        df['date'] = date(keyword)
-        df['channel'] = channel(keyword)
-        df.to_csv('youtube.csv', encoding='utf8')
+        criteria = sys.argv[-1]
+        table(keyword, criteria)
 
 
 if __name__ == '__main__':
